@@ -9,7 +9,7 @@
 
 #To run your program
 
-*open cmd
-*type "iverilog -o cpu  rv32_tb.v rv32i_v1.v"
-*then "vvp cpu"
-*after running your program check your data.hex file for the changes
+* open cmd
+* type "iverilog -o cpu  rv32_tb.v rv32i_v1.v"
+* then "vvp cpu"
+* after running your program check your data.hex file for the changes
