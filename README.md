@@ -7,7 +7,7 @@
 * place your data in appropriate memory locations in the mem.hex file
 * you can run the mem.py script to set both instruction and data memory to zero
 
-#To run your program
+# To run your program
 
 * open cmd
 * type "iverilog -o cpu  rv32_tb.v rv32i_v1.v"
