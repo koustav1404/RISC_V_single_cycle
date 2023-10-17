@@ -4,6 +4,7 @@
 file1 = open('data.hex', 'w')
 file2 = open('instr.hex', 'w')
 for i in range(1024):
+    file1.write("@" + str(i)+" ")
     file1.write("00000000 \n")
     file2.write("00000000 \n")
     
