@@ -1,1 +1,9 @@
 # RISC_V_single_cycle
+
+
+* Make sure you have iverilog installed
+* use an online assembler to generate your hex code of your program and put it in the instr.hex file
+* program counter starts from 0x00000000 location so make sure your program is placed accordingly
+* place your data in appropriate memory locations in the mem.hex file
+* you can run the mem.py script to set both instruction and data memory to zero
+  
