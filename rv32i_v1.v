@@ -8,7 +8,7 @@ module rv32i_v1(instr,write,data_in,data_addr,data_out,clk,pc);
     output reg[31:0]pc;
     initial pc = 32'h00000000;
     
-    //Data Memory interface
+    //Data Memory
     output reg write;
     input [31:0] data_in;
     output reg [31:0] data_addr;
