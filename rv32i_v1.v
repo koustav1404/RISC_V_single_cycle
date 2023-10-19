@@ -135,13 +135,13 @@ module rv32i_v1(instr,write,data_in,data_addr,data_out,clk,pc);
         begin
         write = 1'b0;
             case(`func3)
-            3'b000: begin  if (r[`rs1] == r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            3'b001: begin  if (r[`rs1] != r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            3'b100: begin  if (r[`rs1] < r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            3'b101: begin  if (r[`rs1] >= r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            3'b110: begin  if (r[`rs1] < r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            3'b000: begin  if (r[`rs1] >= r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end end
-            endcase
+            3'b000: begin  if (r[`rs1] == r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end
+            3'b001: begin  if (r[`rs1] != r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end
+            3'b100: begin  if (r[`rs1] < r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end
+            3'b101: begin  if (r[`rs1] >= r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end
+            3'b110: begin  if (r[`rs1] < r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end 
+            3'b000: begin  if (r[`rs1] >= r[`rs2]) begin jmp_br = 1'b1; pc = pc + `Bimm; end else jmp_br = 1'b0; end            
+	    endcase
         end
         `isJAL:
         begin
