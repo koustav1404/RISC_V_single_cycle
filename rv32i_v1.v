@@ -123,9 +123,6 @@ module rv32i_v1(instr,write,data_in,data_addr,data_out,clk,pc);
         data_addr = r[`rs1]+`Simm;
         jmp_br = 1'b0;
         write = 1'b1;
-        if (`rd == 5'b00000)
-        r[0] = 32'h00000000;
-        else
         begin
         case(`func3)
             3'b000: data_out = {{24{r[`rs2][7]}},r[`rs2][7:0]}; 
