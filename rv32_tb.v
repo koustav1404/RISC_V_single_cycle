@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 
 
 module rv32_tb();
@@ -36,9 +38,10 @@ module rv32_tb();
     end
 
     initial begin
-    #1000
+    #100
     $writememh("data.hex",data_memory);
     $finish;
     end
+
 
 endmodule
